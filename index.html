@@ -1,0 +1,63 @@
+<html>
+  <head > <link rel="stylesheet" href="index.css" type="text/css"></head>
+<body>
+  <div class="parent" id="main">
+    <div class="child">
+    <div class="child1">
+      <p>
+        <img src="./images/icon-star.svg">
+      </p>
+    </div>
+     <div class="child2">
+      <h3 >How did we do?</h3>
+      <p>plese let us know how we did with your support request. all feedback is appriciated to help us improve your offering!</p>
+     </div>
+     <div id="form-section">
+     <div class="circle-container">
+      <div class="circle">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
+      <div class="circle">5</div>
+    </div>
+    <button class="submit-btn" onclick="showThankYou()">SUBMIT</button>
+    </div>
+  </div>
+  </div>
+  <div>
+    <div class="thank-you" id="thankYouMessage">
+      <div class="parent2">
+        <div class="thankchild">
+        <div class="child-thankyou">
+          <p>
+            <img src="./images/illustration-thank-you.svg" id="thank-image">
+          </p>
+        </div>
+        <button class="submit-btn1">You Selected 4 out of 5</button>
+         <div class="child2">
+          <h3 id="thank">Thank You!</h3>
+          <p id="rating">we appreciate to taking the time to give a rating.If you ever need more support,don't hesitate to get in touch!</p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const circles = document.querySelectorAll('.circle');
+
+circles.forEach(circle => {
+  circle.addEventListener('click', () => {
+    // Remove active class from all circles
+    circles.forEach(c => c.classList.remove('active'));
+    // Add active class to the clicked one
+    circle.classList.add('active');
+  });
+});
+    function showThankYou() {
+      document.getElementById('main').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
